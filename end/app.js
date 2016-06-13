@@ -6,13 +6,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var router = require('../router');
+var router = require('./router');
 var app = express();
 
-var faviconPath = path.join(path.dirname(path.dirname(__dirname)), 'front', 'favicon.ico');
+var faviconPath = path.join(path.dirname(__dirname), 'front', 'favicon.ico');
 
 // view engine setup
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, './views'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('view cache', false);
